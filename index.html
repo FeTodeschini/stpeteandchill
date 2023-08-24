@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Pete & Chill | Short & Long Term Stays | St. Petersburg, FL</title>
+    <link href="https://fonts.googleapis.com/css?family=Lilita One:300,400,600,700" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mobile-menu.css" class="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+    <!-- LOAD THE LATEST VERSION OF JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- *************** SCRIPT TO MAKE THE MOBILE NAV EXPAND DOWN ****************** -->
+    <script>
+      $(document).ready(function(){
+        $(".nav-button").click(function () {
+        $(".nav-button,.primary-nav").toggleClass("open");
+        });    
+      });
+    </script>
+
+  </head>
+
+  <body>
+
+    
+    <!-- HEADER -->
+    <header>
+          <h1 onclick=>St. Pete & Chill</h1>
+          <h4>Short & Long Term Stays</h4>
+        </div>
+    </header>
+
+  <!-- MENU -->
+  <nav>
+    <ul class="primary-nav">
+      <li><a href="#bb-container">HOUSES</a></li>
+      <li><a href="#property">COMMON AREAS</a></li>
+      <li><a href="#nearby-container">NEARBY ATTRACTIONS</a></li>
+      <li><a href="#map">MAP</a></li>
+    </ul>
+
+    <button class="nav-button">Toggle Navigation</button>
+
+  </nav>
+      
+    <main>
+
+      <!-- HOUSES -->
+      <section id="houses-container" class="container">
+          <div class="container">
+            <h4>Cozy Houses</h4>
+            <br><br>
+            <figure>
+              <img id="figure-living-rooms" src="images/both-living-rooms.jpg" alt="Houses Pictures" onclick="window.open('check-houses.html','_self')">
+            </figure>
+          </div>
+          <div id="houses-description" class="container">
+            <p>We have 2 cozy and super clean houses with comfortable beds and cold water in the fridge and coffe always available for our guests!</p>
+            <br>
+            <div class="btn-center">
+              <button onclick="window.open('check-houses.html','_self')">Check Houses</button>
+            </div>
+          </div>
+          </div>
+      </section>
+
+      <!-- COMMON AREAS -->
+      <section id="common-areas-container" >
+        <h4 id="common-areas-title">Common Areas</h4>
+        <div id="common-areas-description" class="container">
+          <br><br>
+          <p>St. Pete and Chill offers a grill, comfy couches and dining table, all in an outdoor space for you to enjoy sunny St. Pete and the breeze that comes from the ocean!</p>
+          <br><br>
+          <div class="btn-center">
+            <button onclick="window.open('common-areas.html','_self')">Check Areas</button>
+          </div>
+        </div>
+        <figure id="common-areas-figure" class="container">
+          <img class="figure" src="images/common-area-sofas.PNG" alt="Common Areas Pictures" onclick="window.open('common-areas.html','_self')">
+        </figure>
+      </section>
+
+      <!-- NEARBY ATTRACTIONS -->
+      <section id="nearby-attractions-container">
+        <h4 id="nearby-attractions-title">Nearby Attractions</h4>
+        <div id="nearby-attractions-description" class="container">
+          <br><br>
+          <p>Check the amazing attractions in the surroundings of St. Pete and Chill! We have pristine water beaches, kayaking trails, awesome restaurants and much more!</p>
+          <br>
+          <div class="btn-center">
+            <button onclick="window.open('nearby-attractions.html','_self')">Check Attractions</button>
+          </div>
+        </div>
+        <figure id="nearby-attractions-figure" class="container">
+          <img class="figure" src="images/attraction-madeira-beach.png" alt="Common Areas Pictures" onclick="window.open('nearby-attractions.html','_self')">
+        </figure>
+      </section>
+
+      <section id="additional-info-container">
+        
+        <div id="owner-container">
+          <img id="laura" class="round-figure" src="images/laura.png" alt="Owner">
+          <p class="padding-top-10">Meet the Owner</p>
+        </div>
+
+        <div id="airbnb-container">
+          <img id="logo-airbnb" class="round-figure" src="images/logo-airbnb.png" alt="Airbnb Logo" onclick="window.open('https://www.airbnb.com/users/show/93350772')">
+          <p class="padding-top-10">Check us on AirBnB</p>
+        </div>
+        
+        <!-- MAP -->
+        <section id="map">
+          <h4>Check the surroundings in our live map!</h4>
+          <br><br>
+          <iframe id="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3529.3892815984327!2d-82.65794502302556!3d27.79778602149397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e3ddb75b78e5%3A0x143976fef61b9e0b!2s1615%2028th%20Ave%20N%2C%20St.%20Petersburg%2C%20FL%2033713!5e0!3m2!1sen!2sus!4v1690852428448!5m2!1sen!2sus" 
+             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+      </section>
+
+    </main>
+
+    <div id="myModal" class="modal">
+      <section id="modal-container" class="modal-content">
+        <span class="close">&times;</span>
+        <figure id="owner-info-pic">
+            <img id="laura-large" src="images/laura-large.png" alt="Owner">
+        </figure>
+        <div id="owner-description">
+            <br><br>
+            <h1>About Laura</h1>
+            <p>Laura has been gladly hosting for 7 years, being a super host on AirBnB.</p><br>
+            <p>Besides being a painter who paints murals in Tampa Bay Area, she is also a spinning and yoga instructor who loves the outdoors. Ask her about kayaking near her property!</p>
+            <br><br><br><br><br><br><br><br><br><br>
+        </div>
+      </section>
+    </div>
+
+    </div>
+
+    <!--
+    <footer>
+      <div id="contact">
+        <p id="contact-header">Contact & Location</p><br>
+        <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 1615 28th Ave N - St. Petersburg, FL</p>
+        <a id="tel" href="tel:7272121301"><br><i class="fa-solid fa-phone" style="color: #ffffff;"></i> +1 727-212-1301</a>
+        <div id="contact-us"><p><br><i class="fa-solid fa-envelope" style="color: #ffffff;"></i><a href="mailto:laura@addventuresproperties.com?Subject=Request Info on Addventures Properties" target="_blank" rel="noopener noreferrer"> Contact Us</p></a></div>
+      </div>
+      <div id="created-by"><p>Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
+    </footer>
+    -->
+    
+  </body>
+
+  <script src="scripts.js"></script>
+
+</html>

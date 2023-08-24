@@ -1,0 +1,57 @@
+@import "common-styles.css";
+
+body{
+    height: 100%;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 16vh;
+}
+
+#nearby-attractions-container{
+    display: grid;
+    grid-template-columns: 1;
+    row-gap: 20px;
+    justify-items: center;
+}
+
+@media screen and (min-width: 740px){
+    #nearby-attractions-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #madeira, #downtown, #tropicana{
+        justify-self: right;
+    }
+
+    #weedon, #john-pass{
+        justify-self: left;
+    }
+}
+
+@media screen and (min-width: 1450px){
+    #nearby-attractions-container{
+        grid-template-columns: repeat(4, auto);
+    }
+
+    #madeira{
+        grid-row: span 2;
+        grid-column: span 2;
+        justify-self: right;
+    }
+
+    .figure-madeira{
+        height: 100%;
+        width: 100%;
+    }
+
+    #downtown, #tropicana{
+        justify-self: left;
+    }
+
+    #weedon, #john-pass{
+        justify-self: center;
+    }
+}

@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+@import "mobile-menu.css";
+
+/* ---------- RESET THE BROWSER DEFAULT STYLES (ANNOYING) ---------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------- BEGINNING OF STYLES THEMSELVES ---------- */
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    color:#000000;
+    text-align: center;
+    font-family: 'Lilita One';    
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: rgb(94, 90, 90);
+    text-align: center;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    font-weight:900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    color: #000000;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Lilita One';
+}
+
+h6 {
+    text-transform: uppercase;
+    color: rgb(94, 90, 90);
+    font-size: 0.7em;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* ---------- HEADER ---------- */
+header{
+    font-family: 'Montserrat',sans-serif;
+    width:100%;
+    background-color: rgb(77, 77, 77);
+    text-align: center;
+    padding: 10px 0 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
+}
+
+header > h1{
+    color: white;
+    font-size: 3rem;
+    padding: 0;
+    align-self: center;
+    margin: 0;
+}
+
+header > h4{
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
+.padding-top-10{
+    padding-top: 10px;
+}
+
+/* ---------- BUTTON ---------- */
+button{
+    background-color: #000000;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-center{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 75%;
+}
+
+input[type=date]{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+img:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+figure > img{
+    height: 250px;
+    width: 350px;
+    padding: 0.1em;
+}
+
+/* ---------- FIGURE CAPTION INSIDE THE FIRGURE ---------- */
+figure{
+    position: relative;
+}
+
+figcaption{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+}
+
+figcaption > h3{
+    padding: .75rem;
+    color: white;
+    text-align: center;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+/* ---------- Porque footer > a nao funciona? Quero que os links no cabecalho fiquem com fonte 0.8 rem tambem, mas parece que a linha 133 esta tomando precedencia sobre esta classe ---------- */
+footer > div > p,  footer > p, footer > a  {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+#contact-header{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+footer {
+    display: grid;
+    background-color: rgb(180, 176, 176);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    width: 98%;
+}
+
+#created-by{
+    grid-row: span 3;
+    align-self: center;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px){
+    footer {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: left;
+    }
+
+    #contact{
+        grid-column: 2;
+    }
+}

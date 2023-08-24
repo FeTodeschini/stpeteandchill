@@ -1,0 +1,349 @@
+@import "common-styles.css";
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header                      "
+        "nav                         "
+        "main                        "
+        "footer                      ";
+    
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 0.3em 0 0
+}
+
+/* -- ADJUST TTH TOP PADDING FOR ITEMS NOT TO BE OVERLAPPED BY THE HEADER AND NAV BAR -- */
+nav {
+    padding-top: 26vh;
+}
+
+main{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    column-gap: 40px;
+    grid-template-areas:    
+        "houses-container            "
+        "common-areas-container      "
+        "nearby-attractions-container"
+        "additional-info-container   ";
+}
+
+#houses-container{
+    display: grid;
+    column-gap: 10px;
+    padding: 10px;
+    justify-items: center;
+    grid-template-rows:75% 25%;
+    grid-template-areas: 
+        "houses-figure     "
+        "houses-description"
+}
+
+#common-areas-container{
+    display: grid;
+    column-gap: 10px;
+    padding: 10px;
+    grid-template-rows: 25% 75%;
+    grid-template-areas: 
+        "common-areas-title common-areas-figure      "
+        "common-areas-description common-areas-figure";
+}
+
+#nearby-attractions-container{
+    display: grid;
+    column-gap: 10px;
+    padding: 10px;
+    grid-template-rows: 25% 75%;
+    grid-template-areas: 
+        "nearby-attractions-title nearby-attractions-figure      "
+        "nearby-attractions-description nearby-attractions-figure";
+}
+
+header                          {grid-area: header; }
+nav                             {grid-area: nav; }
+#houses-container               {grid-area: houses-container; }
+#common-areas-title             {grid-area: common-areas-title; }
+#common-areas-container         {grid-area: common-areas-container; }
+#common-areas-description       {grid-area: common-areas-description; }
+#common-areas-figure            {grid-area: common-areas-figure; }
+#nearby-attractions-container   {grid-area: nearby-attractions-container; }
+#nearby-attractions-title       {grid-area: nearby-attractions-title;}
+#nearby-attractions-description {grid-area: nearby-attractions-description;}
+#nearby-attractions-figure      {grid-area: nearby-attractions-figure;}
+#owner-container                {grid-area: owner-container; }
+#airbnb-container               {grid-area: airbnb-container; }
+#map                            {grid-area: map; }
+#additional-info-container      {grid-area: additional-info-container; }
+footer                          {grid-area: footer; }
+
+
+
+/* CLASS WITH COMMON STYLES FOR ALL CONTAINERS */
+.container{
+    padding: 30px 10px 30px 10px;
+    border-radius: 10px;
+}
+
+
+/* ---------- HOUSES ---------- */
+#houses-container{
+    background-color: rgb(235, 229, 217);
+}
+
+#figure-living-rooms{
+    width: 600px;
+    height: 330px;
+    justify-self: center;
+}
+
+
+/* ---------- COMMON AREAS ---------- */
+#common-areas-container{
+    background-color: rgb(191, 208, 221);
+    border: solid 1px rgb(191, 208, 221);
+    border-radius: 10px;
+}
+
+.figure{
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    border: solid 3px #FFFFFF;
+}
+
+#common-areas-title{
+    align-self: end;
+}
+
+#common-areas-description{
+    padding-top: 0;
+    align-self: start;
+}
+
+#common-areas-figure{
+    justify-self: center;
+    align-self: start;
+}
+
+
+/* ---------- NEARBY ATTRACTIONS ---------- */
+#nearby-attractions-figure{
+    width: 350px;
+    height: 200px;
+}
+
+#nearby-attractions-container{
+    background-color: rgb(222, 222, 226);
+    border: solid 1px rgb(222, 222, 226);
+    border-radius: 10px;
+}
+
+#nearby-attractions-title{
+    align-self: end;
+}
+
+#nearby-attractions-description{
+    align-self: start;
+    padding-top: 0;
+    margin-bottom: 30px;
+
+}
+
+
+/* -- ROUND PICTURE-- */
+.round-figure{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 0.1em;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#additional-info-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 40px;
+    grid-template-areas: 
+        "owner-container "
+        "airbnb-container"
+        "map             ";
+}
+
+
+/* ---------- MAP ---------- */
+#map{
+    padding: 30px 0 60px 0;   
+    text-align: center;
+    width: 100%;
+}
+
+#map-google{
+    border: 1px solid rgba(92, 90, 90, 0.842);
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 450px;
+}
+
+
+/* ---------- OWNER'S PAGE ---------- */
+#laura-large{
+    width: 180px;
+    height:250px;
+    cursor: initial;
+    opacity: 1;
+    border: 1px solid rgb(92, 90, 90);
+    border-radius: 20px;
+    padding: 5px;
+    margin: 30px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#owner-info{
+    display:grid;
+    grid-template-columns: 1fr;
+    width: 40%;
+}
+
+#owner-info-pic{
+    float: left;
+    margin: 0 0 0 15px;
+}
+
+#btn-owner-close{
+    margin-top: 20px;
+}
+
+
+/* ---------- STYLES FOR THE MODAL (POPUP) ---------- */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6)/* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  /* ---------- MODAL (POPUP) ---------- */
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 780px){
+
+    #common-areas-container{
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "common-areas-title      "
+            "common-areas-figure     "
+            "common-areas-description";
+    }
+ 
+    #nearby-attractions-container{
+        justify-items: center;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "nearby-attractions-title      "
+            "nearby-attractions-figure     "
+            "nearby-attractions-description"; 
+    }
+
+  }
+
+    @media screen and (min-width: 1310px){
+
+    main{
+        grid-template-columns: 1.75fr 1.25fr;
+        grid-template-areas:    
+            "houses-container common-areas-container            "
+            "houses-container nearby-attractions-container      "
+            "additional-info-container additional-info-container";
+    
+    }
+
+    #additional-info-container{
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 1.25fr 1.25fr 1.75fr;
+        grid-template-areas: 
+            "owner-container airbnb-container map";
+    }
+}

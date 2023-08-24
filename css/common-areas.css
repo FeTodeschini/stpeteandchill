@@ -1,0 +1,48 @@
+@import 'common-styles.css';
+
+h1 {
+    padding-top: 16vh;
+}
+
+main{
+    display: grid;
+    justify-content: center;
+}
+
+#common-areas-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+@media screen and (min-width: 1090px){
+    #common-areas-container{
+        justify-items: center;
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+img {
+    height: 250px;
+    width: 350px;
+}
+
+#sofas{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#grill{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+p {
+    text-align: left;
+}
+
+footer > p {
+    text-align: left;
+}

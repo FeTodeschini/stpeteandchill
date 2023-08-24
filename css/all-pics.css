@@ -1,0 +1,40 @@
+@import 'common-styles.css';
+
+main{
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#all-houses-pics{
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+@media screen and (min-width: 740px){
+    #all-houses-pics{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 1450px){
+    #all-houses-pics{
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+}
+
+h1 {
+    color: #000000;
+    padding-top: 16vh;
+}
+
+#close-div{
+    padding: 20px;
+    display: grid;
+    grid-column: auto;
+    justify-content: center;
+}
