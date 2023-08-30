@@ -56,7 +56,6 @@ table {
 
 html, body {
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
 }
 
 h1 {
@@ -123,6 +122,7 @@ header > h4{
     color: white;
     font-size: 1.5em;
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 17px;
 }
 
 p {
@@ -213,9 +213,21 @@ figcaption > h3{
 /* ---------- FOOTER ---------- */
 
 /* ---------- Porque footer > a nao funciona? Quero que os links no cabecalho fiquem com fonte 0.8 rem tambem, mas parece que a linha 133 esta tomando precedencia sobre esta classe ---------- */
-footer > div > p,  footer > p, footer > a  {
+
+footer {
+    display: grid;
+    background-color: rgb(180, 176, 176);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 0;
+    width: 100%;
+    justify-items: right;
+    margin-top: 20px;
+    display: none;
+}
+
+footer > div > p,  footer > p, footer > a, #tel, #contact-us  {
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .underline{
@@ -227,18 +239,11 @@ footer > div > p,  footer > p, footer > a  {
     font-size: 1rem;
 }
 
-footer {
-    display: grid;
-    background-color: rgb(180, 176, 176);
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-    width: 98%;
-}
-
 #created-by{
     grid-row: span 3;
     align-self: center;
-    font-size: 1rem;
+    justify-self: center;
+    font-size: 1em;
 }
 
 @media screen and (min-width: 768px){

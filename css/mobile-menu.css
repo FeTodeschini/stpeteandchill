@@ -91,7 +91,7 @@ nav > ul {
 
 	.primary-nav a:hover {
 		background-color: rgba(0,0,0,.5);
-		border-top-color: transparent;
+		border-radius: 5px;
 	}
 
 
