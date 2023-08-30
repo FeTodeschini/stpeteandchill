@@ -7,8 +7,21 @@
   <link href="https://fonts.googleapis.com/css?family=Lilita One:300,400,600,700" rel="stylesheet">
   <link href="css/house-pics.css" rel="stylesheet">  
   <link href="css/all-pics.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/mobile-menu.css" class="css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
+
+<!-- LOAD THE LATEST VERSION OF JQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- *************** SCRIPT TO MAKE THE MOBILE NAV EXPAND DOWN ****************** -->
+<script>
+    $(document).ready(function(){
+    $(".nav-button").click(function () {
+    $(".nav-button,.primary-nav").toggleClass("open");
+    });    
+    });
+</script>
 
 <body>
 
@@ -16,6 +29,19 @@
     <header>
         <h1>St. Pete & Chill</h1>
         <h4>Short & Long Term Stays</h4>
+
+        <nav>
+            <ul class="primary-nav">
+              <li><a href="check-houses.html">HOUSES</a></li>
+              <li><a href="common-areas.html">COMMON AREAS</a></li>
+              <li><a href="nearby-attractions.html">NEARBY ATTRACTIONS</a></li>
+              <li><a href="index.html#map">MAP</a></li>
+            </ul>
+        
+            <button class="nav-button">Toggle Navigation</button>
+        
+          </nav>
+                  
     </header>
     
         <h1>Breezy Blue's Pictures</h1>

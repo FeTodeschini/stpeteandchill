@@ -30,38 +30,38 @@
     <header>
           <h1 onclick=>St. Pete & Chill</h1>
           <h4>Short & Long Term Stays</h4>
-        </div>
+          <nav>
+            <ul class="primary-nav">
+              <li><a href="check-houses.html">HOUSES</a></li>
+              <li><a href="common-areas.html">COMMON AREAS</a></li>
+              <li><a href="nearby-attractions.html">NEARBY ATTRACTIONS</a></li>
+              <li><a href="#map">MAP</a></li>
+            </ul>
+        
+            <button class="nav-button">Toggle Navigation</button>
+        
+          </nav>
     </header>
 
   <!-- MENU -->
-  <nav>
-    <ul class="primary-nav">
-      <li><a href="#bb-container">HOUSES</a></li>
-      <li><a href="#property">COMMON AREAS</a></li>
-      <li><a href="#nearby-container">NEARBY ATTRACTIONS</a></li>
-      <li><a href="#map">MAP</a></li>
-    </ul>
 
-    <button class="nav-button">Toggle Navigation</button>
-
-  </nav>
       
     <main>
 
       <!-- HOUSES -->
       <section id="houses-container" class="container">
           <div class="container">
-            <h4>Cozy Houses</h4>
+            <h4 id="h4-houses">Cozy Houses</h4>
             <br><br>
             <figure>
-              <img id="figure-living-rooms" src="images/both-living-rooms.jpg" alt="Houses Pictures" onclick="window.open('check-houses.html','_self')">
+              <img id="figure-living-rooms" class="figure" src="images/bb-living-room-2.PNG" alt="Houses Pictures" onclick="window.open('check-houses.html','_self')">
             </figure>
           </div>
           <div id="houses-description" class="container">
             <p>We have 2 cozy and super clean houses with comfortable beds and cold water in the fridge and coffe always available for our guests!</p>
             <br>
             <div class="btn-center">
-              <button onclick="window.open('check-houses.html','_self')">Check Houses</button>
+              <button id="check-houses" onclick="window.open('check-houses.html','_self')">Check Houses</button>
             </div>
           </div>
           </div>

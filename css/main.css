@@ -5,26 +5,26 @@ body{
     grid-template-columns: 1fr;
     grid-template-areas:
         "header                      "
-        "nav                         "
         "main                        "
         "footer                      ";
     
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     justify-content: center;
     justify-items: center;
     margin: 0 0.3em 0 0
 }
 
-/* -- ADJUST TTH TOP PADDING FOR ITEMS NOT TO BE OVERLAPPED BY THE HEADER AND NAV BAR -- */
-nav {
-    padding-top: 26vh;
+header{
+    padding-bottom: 17px;
 }
 
 main{
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr;
+    margin-top: 18vh;
+    grid-template-columns: auto;
     row-gap: 40px;
     column-gap: 40px;
     grid-template-areas:    
@@ -66,7 +66,6 @@ main{
 }
 
 header                          {grid-area: header; }
-nav                             {grid-area: nav; }
 #houses-container               {grid-area: houses-container; }
 #common-areas-title             {grid-area: common-areas-title; }
 #common-areas-container         {grid-area: common-areas-container; }
@@ -102,6 +101,13 @@ footer                          {grid-area: footer; }
     justify-self: center;
 }
 
+#houses-description{
+    margin-bottom: 60px;
+}
+
+#h4-houses{
+    padding-top: 20px;
+}
 
 /* ---------- COMMON AREAS ---------- */
 #common-areas-container{
@@ -119,6 +125,7 @@ footer                          {grid-area: footer; }
 
 #common-areas-title{
     align-self: end;
+    padding: 20px 0;
 }
 
 #common-areas-description{
@@ -134,8 +141,8 @@ footer                          {grid-area: footer; }
 
 /* ---------- NEARBY ATTRACTIONS ---------- */
 #nearby-attractions-figure{
-    width: 350px;
-    height: 200px;
+    width: 100%;
+    height: auto;
 }
 
 #nearby-attractions-container{
@@ -146,13 +153,12 @@ footer                          {grid-area: footer; }
 
 #nearby-attractions-title{
     align-self: end;
+    padding: 20px 0;
 }
 
 #nearby-attractions-description{
     align-self: start;
     padding-top: 0;
-    margin-bottom: 30px;
-
 }
 
 
@@ -266,47 +272,12 @@ footer                          {grid-area: footer; }
   }
 
 
-  /* ---------- MODAL (POPUP) ---------- */
-  /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
   @media screen and (max-width: 780px){
+
+    main{
+        width: auto;
+        padding: 0 10px 0 5px;
+    }
 
     #common-areas-container{
         grid-template-rows: auto;
@@ -315,7 +286,25 @@ footer                          {grid-area: footer; }
             "common-areas-figure     "
             "common-areas-description";
     }
+
+    .container {
+        padding: 0 10px 0 5px;
+    }
+
+    .figure{
+        width: 100%;
+        height: auto;
+    }
+    #figure-living-rooms{
+        width: 100%;
+        height: auto;
+    }
  
+    #map-google{
+        padding: 0;
+        width: 85%;
+    }
+
     #nearby-attractions-container{
         justify-items: center;
         grid-template-rows: auto;
@@ -327,7 +316,13 @@ footer                          {grid-area: footer; }
 
   }
 
-    @media screen and (min-width: 1310px){
+    @media screen and (min-width: 781px){
+        #h4-houses{
+            padding-top: 0px;
+        }
+    }
+
+    @media screen and (min-width: 1470px){
 
     main{
         grid-template-columns: 1.75fr 1.25fr;
@@ -346,4 +341,17 @@ footer                          {grid-area: footer; }
         grid-template-areas: 
             "owner-container airbnb-container map";
     }
+
+        #common-areas-title, #nearby-attractions-title{
+        padding: 0;
+    }
+
+    #houses-description{
+        margin-bottom: 0;
+    }
+
+    #h4-houses{
+        padding-top: 0px;
+    }
+
 }

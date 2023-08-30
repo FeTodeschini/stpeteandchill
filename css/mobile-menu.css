@@ -1,8 +1,25 @@
 .nav-button { display: none; } /* hide the navigation button by default */
 
-@media only screen and (max-width: 1309px)  { 
+nav > ul {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: #ffffff;
+    justify-items: center;
+}
+
+@media screen and (min-width: 781px){
+	nav{
+    	padding-top: 20px;
+	}
+}
+
+@media only screen and (max-width: 780px)  { 
 	.primary-nav li.active a {background-color: rgba(0,0,0,0.3); } 
 
+
+	nav{
+		background-color: rgb(77, 77, 77);
+	}
 
 	/* Navigation Button
 	-------------------------------------------------------- */
@@ -10,11 +27,11 @@
 	.nav-button {
 		display: block;
 		position: absolute;
-		top: 5px;
-		left: 5px;
-		width: 100px;
-		height: 35px;
-		background: url('../images/menu-open.png'), linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.2));
+		top: 20px;
+		right: 05px;
+		width: 35px;
+		height: 30px;
+		background: url('../images/menu.png'), linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.2));
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: auto;
@@ -30,7 +47,7 @@
 		background-color: rgba(0,0,0,.1); 
 	}
 	.nav-button.open {
-		background: url('../images/menu-close.png'), linear-gradient(rgba(0,0,0,0), rgba(77,77,77,.2));
+		background: url('../images/menu.png'), linear-gradient(rgba(0,0,0,0), rgba(77,77,77,.2));
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: auto;
@@ -39,22 +56,19 @@
 	/* Navigation Bar
 	-------------------------------------------------------- */
 
-	body { padding-top: 44px; } 
-
 	.primary-nav {
 		width: 200px; 
 		float: none;
-		background-color: rgb(122, 122, 122);
-	
-		display: block;
+		background-color: rgb(77, 77, 77);
+	    display: block;
 		height: 44px;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
 		position: absolute;
-		top: 0px;
-		left: 0px;
-		z-index: 998;
+		top: 15px;
+		right: 0px;
+		z-index: -1;
 		clear: both;
 	}
 	.primary-nav li {
@@ -74,6 +88,13 @@
 		border-bottom: 1px solid rgba(0,0,0,.2);
 		border-top: 1px solid rgba(255,255,255,.1); 
 	}
+
+	.primary-nav a:hover {
+		background-color: rgba(0,0,0,.5);
+		border-top-color: transparent;
+	}
+
+
 	.primary-nav li a:hover {
 		background-color: rgba(0,0,0,.5);
 		border-top-color: transparent;
@@ -87,6 +108,7 @@
 	.primary-nav.open { 
 		height: auto; 
 		padding-top: 44px;
+		z-index: 998;
 	}
 	.primary-nav.open li { 
 		display: block; 

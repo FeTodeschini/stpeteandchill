@@ -11,6 +11,18 @@
 
     <script src="scripts.js"></script>
 
+    <!-- LOAD THE LATEST VERSION OF JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- *************** SCRIPT TO MAKE THE MOBILE NAV EXPAND DOWN ****************** -->
+    <script>
+        $(document).ready(function(){
+          $(".nav-button").click(function () {
+            $(".nav-button,.primary-nav").toggleClass("open");
+          });    
+        });
+    </script>
+
   </head>
 
   <body>
@@ -20,6 +32,18 @@
     <header>
         <h1>St. Pete & Chill</h1>
         <h4>Short & Long Term Stays</h4>
+        <nav>
+            <ul class="primary-nav">
+              <li><a href="check-houses.html">HOUSES</a></li>
+              <li><a href="common-areas.html">COMMON AREAS</a></li>
+              <li><a href="nearby-attractions.html">NEARBY ATTRACTIONS</a></li>
+              <li><a href="index.html#map">MAP</a></li>
+            </ul>
+        
+            <button class="nav-button">Toggle Navigation</button>
+        
+          </nav>
+
     </header>
 
     <main>
@@ -31,7 +55,9 @@
                 <img id="bb-figure-3" class="figure-3" src="images/bb-coffee.png" alt="Coffee!">
             </figure>
             <div class="availability">
-                <p>From: <input type="date" name="bb-date-from" id="bb-date-from"> To: <input type="date" name="bb-date-to" id="bb-date-to"></p>
+              <div class="availability-dates">
+                <div>From: <input type="date" name="bb-date-from" id="bb-date-from"></div><div class="availability-date-to">&nbsp;To: <input type="date" name="bb-date-to" id="bb-date-to"></div>
+              </div>
                 <button id="btn-bb-availability" onclick="checkAvailability('bb')">Check Availability</button>
             </div>
         </div>
@@ -44,7 +70,9 @@
                 <img id="gp-figure-3" class="figure-3" src="images/gp-bedroom.png" alt="Golden Palm's Bedroom">
             </figure>
             <div class="availability">
-                <p>From: <input type="date" name="gp-date-from" id="gp-date-from"> To: <input type="date" name="gp-date-to" id="gp-date-to"></p>
+              <div class="availability-dates">
+                <div>From: <input type="date" name="gp-date-from" id="gp-date-from"></p></div><div class="availability-date-to">&nbsp;To: <input type="date" name="gp-date-to" id="gp-date-to"></div>
+              </div>
                 <button id="btn-gp-availability" onclick="checkAvailability('gp')">Check Availability</button>
             </div>
         </div>

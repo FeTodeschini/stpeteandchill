@@ -17,12 +17,6 @@ main{
     row-gap: 20px;
 }
 
-@media screen and (min-width: 1090px){
-    #common-areas-container{
-        justify-items: center;
-        grid-template-columns: repeat(3, auto);
-    }
-}
 
 img {
     height: 250px;
@@ -45,4 +39,18 @@ p {
 
 footer > p {
     text-align: left;
+}
+
+@media screen and (min-width: 730px){
+    #common-areas-container{
+        justify-items: center;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (min-width: 1480px){
+    #common-areas-container{
+        justify-items: center;
+        grid-template-columns: repeat(4, auto);
+    }
 }

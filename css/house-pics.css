@@ -4,29 +4,13 @@ main{
     padding-top: 16vh;
     justify-items: center;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
 }
 
-@media screen and (min-width: 1573px){
-main{
-    grid-template-columns: auto auto;
-    column-gap: 120px;
-    }
-}
+
 
 #gp-container{
     padding: 40px;
-}
-
-@media screen and (min-width: 1573px){
-    #bb-container{
-        justify-self: right;
-    }
-
-    #gp-container{
-        justify-self: left;
-        padding: 0;
-    }
 }
 
 .house-container{
@@ -37,36 +21,18 @@ main{
     grid-template-columns: 1fr;
 }
 
-@media screen and (min-width: 1573px){
-.house-container{
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    }
-}
-
-.main-figure{
-    grid-row: span 2;
-    height: 100%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;  
-}
-
-.figure-2{
-    border-top-right-radius: 15px;
-}
-
-.figure-3{
-    border-bottom-right-radius: 15px;
+.availability-date-to{
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
 /* ---------- BOX WITH AVAILABILITY CALENDAR AND BUTTON ---------- */
 .availability{
     display: grid;
-    grid-column: auto 1fr;
+    grid-column: auto;
     justify-content: center;
     gap: 15px;
-    margin: 30px 160px 30px 160px;
+    margin: 30px 0;
     padding: 20px;
     justify-items: center;
     border-radius: 15px;
@@ -80,4 +46,62 @@ main{
     column-gap: 20px;
     row-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
+}
+
+
+@media screen and (min-width: 767px){
+    main{
+        grid-template-columns: auto;
+    }
+
+    .house-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    
+    }
+    
+    .availability{
+        margin: 30px 160px 30px 160px;
+    }
+
+    .main-figure{
+        grid-row: span 2;
+        height: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;  
+    }
+    
+    .figure-2{
+        border-top-right-radius: 15px;
+    }
+    
+    .figure-3{
+        border-bottom-right-radius: 15px;
+    }
+
+    .availability-dates{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .availability-date-to{
+        padding: 0;
+    }
+}
+
+
+@media screen and (min-width: 1573px){
+    main{
+        grid-template-columns: auto auto;
+        column-gap: 120px;
+    }
+    
+    #bb-container{
+        justify-self: right;
+    }
+
+    #gp-container{
+        justify-self: left;
+        padding: 0;
+    }
 }
