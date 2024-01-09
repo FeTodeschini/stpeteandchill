@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Pete & Chill | Check Houses</title>
+    <link href="https://fonts.googleapis.com/css?family=Lilita One:300,400,600,700" rel="stylesheet">
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/cozy-houses.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css" class="css">
+
+    <script src="scripts/scripts.js"></script>
+
+  </head>
+
+  <body>
+
+    
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__logo">
+        <img src="images/logo-st-pete-chill-white.png" alt="" onclick="location.href='index.html'" class="logo cursor-pointer z-index-2">
+      </div>
+
+      <div class="header__text">
+        <h1 class="heading-primary">
+        <span class="heading-primary__main">Cozy Houses</span>
+        <span class="heading-primary__sub">in St Petersburg, FL</span>
+      </h1>
+      </div>
+    </header>
+
+
+  <!-- MENU -->
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+    <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+    </label>
+
+    <div class="navigation__background">&nbsp;</div>
+
+    <nav class="navigation__nav">
+        <ul class="navigation__list">
+            <li class="navigation__item"><a href="cozy-houses.html" class="navigation__link">COZY HOUSES</a></li>
+            <li class="navigation__item"><a href="common-areas.html" class="navigation__link">COMMON AREAS</a></li>
+            <li class="navigation__item"><a href="nearby-attractions.html" class="navigation__link">NEARBY ATTRACTIONS</a></li>
+            <li class="navigation__item"><a href="index.html#map" class="navigation__link">&nbsp;&nbsp;&nbsp;MAP&nbsp;&nbsp;&nbsp;</a></li>
+            <li class="navigation__item"><a href="index.html#contact" class="navigation__link" id="menuContact">CONTACT</a></li>
+            </ul>
+    </nav>
+  </div>
+
+  <!-- MAIN -->
+    <main>
+        <h2 class="pad-bottom-2 heading-secondary">Cozy Houses</h2>
+        <div class="cozy-houses-container">
+          <div id="bb-container">
+            <h1 class="pad-bottom-2 pad-top-4 heading-tertiary">Breezy Blue</h1>
+            <figure id="breezy-blue" class="house-container" onclick="window.open('breezy-blue.html','_self')">
+                  <img id="bb-figure-main" class="main-figure standard-picture" src="images/bb-living-room.PNG" alt="Breezy Blue's Living Room">
+                  <img id="bb-figure-2" class="figure-2 standard-picture" src="images/bb-couch.PNG" alt="Breezy Blue's Comfy Couch">
+                  <div class="parent-figure">
+                    <img id="bb-figure-3" class="figure-3 standard-picture" src="images/bb-coffee.png" alt="Coffee!">
+                    <img class="child-figure" src="images/show-all-photos.png" alt="All Photos">
+                  </div>
+              </figure>
+              <div class="availability">
+                <div class="availability-dates">
+                  <div>From: <input type="date" name="bb-date-from" id="bb-date-from"></div><div class="availability-date-to">&nbsp;To: <input type="date" name="bb-date-to" id="bb-date-to"></div>
+                </div>
+                  <button id="btn-bb-availability" class="button-black" onclick="checkAvailability('bb')">Check Availability</button>
+              </div>
+          </div>
+
+          <div id="gp-container">
+              <h1 class="pad-bottom-2 pad-top-4 heading-tertiary">Golden Palm</h1>
+              <figure id="golden-palm" class="house-container" onclick="window.open('golden-palm.html','_self')">
+                  <img id="gp-figure-main" class="main-figure standard-picture" src="images/gp-living-room.PNG" alt="Golden Palm's Living Room">
+                  <img id="gp-figure-2" class="figure-2 standard-picture" src="images/gp-home-office.PNG" alt="Golden Palm's Home Office">
+                  <div class="parent-figure">
+                    <img id="gp-figure-3" class="figure-3 standard-picture" src="images/gp-bedroom.png" alt="Golden Palm's Bedroom">
+                    <img class="child-figure" src="images/show-all-photos.png" alt="All Photos">
+                  </div>
+              </figure>
+              <div class="availability">
+                <div class="availability-dates">
+                  <div>From: <input type="date" name="gp-date-from" id="gp-date-from"></p></div><div class="availability-date-to">&nbsp;To: <input type="date" name="gp-date-to" id="gp-date-to"></div>
+                </div>
+                  <button id="btn-gp-availability" class="button-black" onclick="checkAvailability('gp')">Check Availability</button>
+              </div>
+          </div>
+
+          <div id="qj-container">
+            <h1 class="pad-bottom-2 pad-top-4 heading-tertiary">Quiet Jungle</h1>
+            <figure id="quiet-jungle" class="house-container" onclick="window.open('quiet-jungle.html','_self')">
+                <img id="gp-figure-main" class="main-figure standard-picture" src="images/qj-living-room-1.png" alt="Golden Palm's Living Room">
+                <img id="gp-figure-2" class="figure-2 standard-picture" src="images/qj-bedroom-1.png" alt="Quiet Jungle's Bedroom">
+                <div class="parent-figure">
+                  <img id="gp-figure-3" class="figure-3 standard-picture" src="images/qj-restroom-1.png" alt="Quiet Jungle's Restroom">
+                  <img class="child-figure" src="images/show-all-photos.png" alt="All Photos">
+                </div>
+            </figure>
+            <div class="availability">
+              <div class="availability-dates">
+                <div>From: <input type="date" name="qj-date-from" id="qj-date-from"></p></div><div class="availability-date-to">&nbsp;To: <input type="date" name="qj-date-to" id="qj-date-to"></div>
+              </div>
+                <button id="btn-qj-availability" class="button-black" onclick="checkAvailability('qj')">Check Availability</button>
+            </div>
+        </div>
+      </div>
+    </main>
+ 
+    <footer class="footer">
+      <div id="contact" class="contact">
+        <p id="contact-header"  class="font-white">Location & Contact</p><br>
+        <p class="font-white"><i class="fa-solid fa-location-dot font-white"></i>&nbsp;1615 28th Ave N - St. Petersburg, FL</p>
+        <a id="tel" href="tel:7272121301" class="font-white"><br><i class="fa-solid fa-phone font-white"></i>&nbsp;+1 727-212-1301</a>
+        <div id="email-us" class="font-white"><p><br><i class="fa-solid fa-envelope font-white"></i><a href="mailto:laura@addventuresproperties.com?Subject=Request Info on St. Pete and Chill" target="_blank" rel="noopener noreferrer">&nbsp;Email Us</p></a></div>
+      </div>
+      <div id="created-by"><p class="font-white">Website Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
+    </footer>
+
+</body>
+
+<script src="scripts/contact-modal.js"></script>
+
+</html>

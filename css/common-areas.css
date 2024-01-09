@@ -1,11 +1,8 @@
-@import 'common-styles.css';
-
-h1 {
-    padding-top: 16vh;
-}
+@import 'common.css';
 
 main{
     display: grid;
+    grid-template-rows: auto 1fr;
     justify-content: center;
 }
 
@@ -15,22 +12,6 @@ main{
     width: 60%;
     column-gap: 20px;
     row-gap: 20px;
-}
-
-
-img {
-    height: 250px;
-    width: 350px;
-}
-
-#sofas{
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-#grill{
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
 p {
@@ -46,6 +27,7 @@ footer > p {
         justify-items: center;
         grid-template-columns: repeat(2, auto);
     }
+
 }
 
 @media screen and (min-width: 1480px){

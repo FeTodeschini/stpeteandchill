@@ -1,214 +1,28 @@
-@import "common-styles.css";
+@import "common.css";
+@import "animation.css";
 
-body{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "header                      "
-        "main                        "
-        "footer                      ";
-    
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    justify-items: center;
-    margin: 0 0.3em 0 0
-}
+/* ---------------------------------------------------------------------- */
 
-main{
-    width: 80%;
-    display: grid;
-    margin-top: 18vh;
-    grid-template-columns: auto;
-    row-gap: 40px;
-    column-gap: 40px;
-    grid-template-areas:    
-        "houses-container            "
-        "common-areas-container      "
-        "nearby-attractions-container"
-        "additional-info-container   ";
-}
+/* #owner-container, #airbnb-container {background-color: #f0f0f0; } */
 
-#houses-container{
-    display: grid;
-    column-gap: 10px;
-    padding: 10px;
-    justify-items: center;
-    grid-template-rows:75% 25%;
-    grid-template-areas: 
-        "houses-figure     "
-        "houses-description"
-}
-
-#common-areas-container{
-    display: grid;
-    column-gap: 10px;
-    padding: 10px;
-    grid-template-rows: 25% 75%;
-    grid-template-areas: 
-        "common-areas-title common-areas-figure      "
-        "common-areas-description common-areas-figure";
-}
-
-#nearby-attractions-container{
-    display: grid;
-    column-gap: 10px;
-    padding: 10px;
-    grid-template-rows: 25% 75%;
-    grid-template-areas: 
-        "nearby-attractions-title nearby-attractions-figure      "
-        "nearby-attractions-description nearby-attractions-figure";
-}
-
-header                          {grid-area: header; }
-#houses-container               {grid-area: houses-container; }
-#common-areas-title             {grid-area: common-areas-title; }
-#common-areas-container         {grid-area: common-areas-container; }
-#common-areas-description       {grid-area: common-areas-description; }
-#common-areas-figure            {grid-area: common-areas-figure; }
-#nearby-attractions-container   {grid-area: nearby-attractions-container; }
-#nearby-attractions-title       {grid-area: nearby-attractions-title;}
-#nearby-attractions-description {grid-area: nearby-attractions-description;}
-#nearby-attractions-figure      {grid-area: nearby-attractions-figure;}
-#owner-container                {grid-area: owner-container; }
-#airbnb-container               {grid-area: airbnb-container; }
-#map                            {grid-area: map; }
-#additional-info-container      {grid-area: additional-info-container; }
-footer                          {grid-area: footer; }
-
-
-
-/* CLASS WITH COMMON STYLES FOR ALL CONTAINERS */
-.container{
-    padding: 30px 10px 30px 10px;
-    border-radius: 10px;
-}
-
-
-/* ---------- HOUSES ---------- */
-#houses-container{
-    background-color: rgb(235, 229, 217);
-}
-
-#figure-living-rooms{
-    width: 600px;
-    height: 330px;
-    justify-self: center;
-}
-
-#houses-description{
-    margin-bottom: 60px;
-}
-
-#h4-houses{
-    padding-top: 20px;
-}
-
-/* ---------- COMMON AREAS ---------- */
-#common-areas-container{
-    background-color: rgb(191, 208, 221);
-    border: solid 1px rgb(191, 208, 221);
-    border-radius: 10px;
-}
-
-.figure{
-    width: 350px;
-    height: 200px;
-    border-radius: 10px;
-    border: solid 3px #FFFFFF;
-}
-
-#common-areas-title{
-    align-self: end;
-    padding: 20px 0;
-}
-
-#common-areas-description{
-    padding-top: 0;
-    align-self: start;
-}
-
-#common-areas-figure{
-    justify-self: center;
-    align-self: start;
-}
-
-
-/* ---------- NEARBY ATTRACTIONS ---------- */
-#nearby-attractions-figure{
-    width: 100%;
-    height: auto;
-}
-
-#nearby-attractions-container{
-    background-color: rgb(222, 222, 226);
-    border: solid 1px rgb(222, 222, 226);
-    border-radius: 10px;
-}
-
-#nearby-attractions-title{
-    align-self: end;
-    padding: 20px 0;
-}
-
-#nearby-attractions-description{
-    align-self: start;
-    padding-top: 0;
-}
-
-
-/* -- ROUND PICTURE-- */
-.round-figure{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    padding: 0.1em;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
-}
-
-#additional-info-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
+.section-about-description{
+    padding: 0 2rem 4rem 2rem;
+    line-height: 2rem;
     text-align: center;
-    row-gap: 40px;
-    grid-template-areas: 
-        "owner-container "
-        "airbnb-container"
-        "map             ";
+ }
+
+.subject-description{
+    font-size: 2.5rem;
+    color: #777;
 }
-
-
-/* ---------- MAP ---------- */
-#map{
-    padding: 30px 0 60px 0;   
-    text-align: center;
-    width: 100%;
-}
-
-#map-google{
-    border: 1px solid rgba(92, 90, 90, 0.842);
-    padding: 5px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    height: 450px;
-}
-
 
 /* ---------- OWNER'S PAGE ---------- */
 #laura-large{
-    width: 180px;
-    height:250px;
+    width: 220px;
+    height:300px;
     cursor: initial;
-    opacity: 1;
-    border: 1px solid rgb(92, 90, 90);
-    border-radius: 20px;
     padding: 5px;
     margin: 30px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 #owner-info{
@@ -222,132 +36,210 @@ footer                          {grid-area: footer; }
     margin: 0 0 0 15px;
 }
 
+#owner-description{
+    padding: 0 20px;
+}
+
+#owner-description > h1{
+    text-align: center;
+}
+
 #btn-owner-close{
     margin-top: 20px;
 }
 
+.section-options-figure{
+    width: 7rem;
+    margin-bottom: 2rem;
+}
 
-/* ---------- STYLES FOR THE MODAL (POPUP) ---------- */
+/* ---------- MAP ---------- */
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.6)/* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
+.section-about-map{
+    padding: 0 2rem 4rem 2rem;
+    text-align: center;
+    justify-self: center;
+    flex: 0 0 50vw;
+}
+
+#map-google{
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
+}
+
+/* ---------- OPTIONS ----------  */
+.section-options{
+    padding: 15rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(195, 231, 248, 0.8),
+        rgba(28, 84, 158, 0.8)),
+        url(../images/attraction-weedon-island-preserve.png);
+    background-size: cover;
+    transform: skewY(-7deg);
+    height: 150vh;
+    margin: 4rem 0;
+}
+
+.section-options > * {
+    transform: skewY(7deg);
+ }
+
+.section-options-container{
+    padding: 0 1rem 4rem 1rem;
+    margin: 0;
+ }
+
+.options-card {
+    padding: 2rem 3rem 22rem 3rem;
+    width: 68%;
+    height: 6vh;
+    border-radius: 5px;
+    margin: 1rem 1rem 4rem 1rem;
+    background-color: #f7f7f7;
+    opacity: .7;
+    transition: transform .3s;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
     cursor: pointer;
-  }
+}
 
+    /* ADDITIONAL INFO */
 
-  @media screen and (max-width: 780px){
-
-    main{
-        width: auto;
-        padding: 0 10px 0 5px;
-    }
-
-    #common-areas-container{
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "common-areas-title      "
-            "common-areas-figure     "
-            "common-areas-description";
-    }
-
-    .container {
-        padding: 0 10px 0 5px;
-    }
-
-    .figure{
-        width: 100%;
-        height: auto;
-    }
-    #figure-living-rooms{
-        width: 100%;
-        height: auto;
-    }
- 
-    #map-google{
+    .additional-info__container{
         padding: 0;
-        width: 85%;
+        justify-content: space-around;
+        width: 70%;
+        margin: 0 auto;
     }
 
-    #nearby-attractions-container{
-        justify-items: center;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "nearby-attractions-title      "
-            "nearby-attractions-figure     "
-            "nearby-attractions-description"; 
+    .additional-info__card {
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
+        border-radius: 5px;
+        transition: transform .3s;
+        height: 18rem;
+        position: relative;
+        padding: 1rem;
+        cursor: pointer;
+        margin-bottom: 4rem;
     }
-
-  }
-
-    @media screen and (min-width: 781px){
-        #h4-houses{
-            padding-top: 0px;
-        }
-    }
-
-    @media screen and (min-width: 1470px){
-
-    main{
-        grid-template-columns: 1.75fr 1.25fr;
-        grid-template-areas:    
-            "houses-container common-areas-container            "
-            "houses-container nearby-attractions-container      "
-            "additional-info-container additional-info-container";
     
+    .additional-info__card:hover {transform: translateY(-1.5rem) scale(1.03);}    
+    
+    .additional-info-card__picture {
+        background-size: contain;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        height: 17rem;
     }
 
-    #additional-info-container{
-        justify-items: center;
+    .additional-info-card__picture-owner{
+        background-image: url(../images/laura.PNG);
+    }
+
+    .additional-info-card__picture-airbnb{
+        background-image: url(../images/logo-airbnb.png);
+    }
+
+    .additional-info-card__picture-owner, .additional-info-card__picture-airbnb{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        opacity: .5;
+    }
+
+    .additional-info-card__title {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        position: absolute;
+        top: 15rem;
+        right: 1.5rem;
+        width: 75%;
+    }
+
+    .additional-info-card__title-span{
+        background-image: linear-gradient(to right bottom, rgba(195, 231, 248, 0.8), rgba(28, 84, 158, 0.8));
+        color: #fff;
+    }
+
+@media screen and (min-width: 780px){
+
+    html {padding: 1rem;}
+
+    #map-google{
+        width: 80%;
+     }
+
+     /* SECTION ABOUT */
+     .section-about-container{
+        display: flex;
         align-items: center;
-        text-align: center;
-        grid-template-columns: 1.25fr 1.25fr 1.75fr;
-        grid-template-areas: 
-            "owner-container airbnb-container map";
+     }
+
+     .section-about-description{
+        padding: 0 10rem;
+        text-align: left;
+     }
+
+     .section-about-map{
+        padding: 0rem;
     }
 
-        #common-areas-title, #nearby-attractions-title{
-        padding: 0;
+     /* OPTIONS CONTAINER */
+     .section-options{
+        display: flex;
+        height: 35vh;
+        margin-top: 15rem;
+     }
+
+     .section-options-container{
+        display: flex;
+        flex: 0 0 50%;
+        margin: 0 auto;
+        justify-content: space-around;
+        transition: all .2s;
+        padding: 0 1rem;
+     }
+
+     .section-options-description{
+        line-height: 1.7rem;;
+    }
+    
+    .options-card {
+        padding: 2rem 3rem 22rem 3rem;
+        width: 20%;
+        height: 10%;
+        border-radius: 5px;
+        margin: 1rem;
     }
 
-    #houses-description{
-        margin-bottom: 0;
+    .options-card:hover {transform: translateY(-1.5rem) scale(1.03);}
+
+    .additional-info{
+        padding-top: 10rem;
     }
 
-    #h4-houses{
-        padding-top: 0px;
+    .additional-info__container{
+        padding: 5rem 0;
+        display: flex;
+    }
+    
+    .additional-info__card{
+        height: 22rem;
+        margin: 0;
+    }
+    .additional-info-card__picture {
+        background-size: cover;
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .additional-info-card__title {
+        top: 18rem;
+        right: 1.5rem;
     }
 
 }

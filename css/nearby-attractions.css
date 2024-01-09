@@ -1,13 +1,9 @@
-@import "common-styles.css";
-
-body{
-    height: 100%;
-}
+@import "common.css";
 
 main{
     display: grid;
-    grid-template-columns: 1fr;
-    padding-top: 16vh;
+    grid-template-rows: auto 1fr;
+    justify-content: center;
 }
 
 #nearby-attractions-container{
@@ -18,19 +14,19 @@ main{
     justify-items: center;
 }
 
+/* ---------- MEDIA QUERIES ---------- */
 @media screen and (min-width: 740px){
     #nearby-attractions-container{
         grid-template-columns: repeat(2, min-content);
         justify-content: center;
     }
-
-    
+   
     #madeira{
         grid-column: span 2;
         width: 100%;
     }
 
-    .figure-madeira{
+    #figure-madeira{
         width: 100%;
     }
 
@@ -41,6 +37,7 @@ main{
     #weedon, #john-pass{
         justify-self: left;
     }
+
 }
 
 @media screen and (min-width: 1450px){
@@ -54,16 +51,8 @@ main{
         justify-self: right;
     }
 
-    .figure-madeira{
+    #figure-madeira{
         height: 100%;
         width: 100%;
-    }
-
-    #downtown, #tropicana{
-        justify-self: left;
-    }
-
-    #weedon, #john-pass{
-        justify-self: center;
     }
 }

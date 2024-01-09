@@ -1,10 +1,12 @@
-@import 'common-styles.css';
+@import 'common.css';
 
 main{
+    display: grid;
     grid-template-columns: 1fr;
-    padding-top: 0;
     column-gap: 10px;
     row-gap: 10px;
+    justify-content: center;
+    justify-items: center;
 }
 
 #all-houses-pics{
@@ -16,6 +18,7 @@ main{
 @media screen and (min-width: 740px){
     #all-houses-pics{
         grid-template-columns: repeat(2, 1fr);
+
     }
 
 }
@@ -23,13 +26,7 @@ main{
 @media screen and (min-width: 1450px){
     #all-houses-pics{
         grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
     }
-}
-
-h1 {
-    color: #000000;
-    padding-top: 16vh;
 }
 
 #close-div{

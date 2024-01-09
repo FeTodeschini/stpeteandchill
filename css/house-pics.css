@@ -1,0 +1,107 @@
+@import "common-styles.css";
+
+main{
+    padding-top: 16vh;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+
+#gp-container{
+    padding: 40px;
+}
+
+.house-container{
+    justify-items: center;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.availability-date-to{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+/* ---------- BOX WITH AVAILABILITY CALENDAR AND BUTTON ---------- */
+.availability{
+    display: grid;
+    grid-column: auto;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 20px;
+    justify-items: center;
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- STYLES FOR THE PAGES WITH ALL PICS - BB AND GP ---------- */
+
+.house-all-pics-container{
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+@media screen and (min-width: 767px){
+    main{
+        grid-template-columns: auto;
+    }
+
+    .house-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    
+    }
+    
+    .availability{
+        margin: 30px 160px 30px 160px;
+    }
+
+    .main-figure{
+        grid-row: span 2;
+        height: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;  
+    }
+    
+    .figure-2{
+        border-top-right-radius: 15px;
+    }
+    
+    .figure-3{
+        border-bottom-right-radius: 15px;
+    }
+
+    .availability-dates{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .availability-date-to{
+        padding: 0;
+    }
+}
+
+
+@media screen and (min-width: 1573px){
+    main{
+        grid-template-columns: auto auto;
+        column-gap: 120px;
+    }
+    
+    #bb-container{
+        justify-self: right;
+    }
+
+    #gp-container{
+        justify-self: left;
+        padding: 0;
+    }
+}

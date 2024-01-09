@@ -1,0 +1,6 @@
+.header{
+    height: 35vh;
+    background-image: linear-gradient(to right bottom, rgba(195, 231, 248, 0.7),rgba(28, 84, 158, 0.7)), url(../images/attraction-madeira-beach.png);
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 25vh, 0 100%);
+}

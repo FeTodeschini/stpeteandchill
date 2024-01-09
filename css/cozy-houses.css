@@ -1,0 +1,75 @@
+@import "common.css";
+
+.cozy-houses-container{
+    display: grid;
+    justify-items: center;
+}
+
+.house-container{
+    justify-items: center;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.availability-date-to{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+/* ---------- BOX WITH AVAILABILITY CALENDAR AND BUTTON ---------- */
+.availability{
+    display: grid;
+    grid-column: auto;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 20px;
+    justify-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- STYLES FOR THE PAGES WITH ALL PICS - BB AND GP ---------- */
+
+.house-all-pics-container{
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+@media screen and (min-width: 767px){
+    .cozy-houses-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .house-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .availability{
+        margin: 30px 160px 30px 160px;
+    }
+
+    .main-figure{
+        grid-row: span 2;
+        height: 100%;
+    }
+
+    .availability-dates{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .availability-date-to{
+        padding: 0;
+    }
+}
+
+
+@media screen and (min-width: 2140px){
+
+}

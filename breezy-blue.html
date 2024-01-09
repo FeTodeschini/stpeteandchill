@@ -5,110 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>St. Pete & Chill | Breezy Blue's Pictures</title>
   <link href="https://fonts.googleapis.com/css?family=Lilita One:300,400,600,700" rel="stylesheet">
+  <link href="css/animation.css" rel="stylesheet">
+  <link href="css/header.css" rel="stylesheet">
   <link href="css/house-pics.css" rel="stylesheet">  
   <link href="css/all-pics.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/mobile-menu.css" class="css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="css/menu.css" class="css">
 </head>
-
-<!-- LOAD THE LATEST VERSION OF JQUERY-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<!-- *************** SCRIPT TO MAKE THE MOBILE NAV EXPAND DOWN ****************** -->
-<script>
-    $(document).ready(function(){
-    $(".nav-button").click(function () {
-    $(".nav-button,.primary-nav").toggleClass("open");
-    });    
-    });
-</script>
 
 <body>
 
     <!-- HEADER -->
-    <header>
-        <h1>St. Pete & Chill</h1>
-        <h4>Short & Long Term Stays</h4>
-
-        <nav>
-            <ul class="primary-nav">
-              <li><a href="check-houses.html">HOUSES</a></li>
-              <li><a href="common-areas.html">COMMON AREAS</a></li>
-              <li><a style="padding: 7px;" href="nearby-attractions.html">NEARBY ATTRACTIONS</a></li>
-              <li><a href="index.html#map">MAP</a></li>
-            </ul>
-        
-            <button class="nav-button">Toggle Navigation</button>
-        
-          </nav>
-                  
-    </header>
+    <header class="header">
+        <div class="header__logo">
+          <img src="images/logo-st-pete-chill-white.png" alt="" onclick="location.href='index.html'" class="logo cursor-pointer z-index-2">
+        </div>
+  
+        <div class="header__text">
+          <h1 class="heading-primary">
+          <span class="heading-primary__main">Cozy Houses</span>
+          <span class="heading-primary__sub">in St Petersburg, FL</span>
+        </h1>
+        </div>
+      </header>
+  
+  
+    <!-- MENU -->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
     
-        <h1>Breezy Blue's Pictures</h1>
-        
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+    
+        <div class="navigation__background">&nbsp;</div>
+    
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="cozy-houses.html" class="navigation__link">COZY HOUSES</a></li>
+                <li class="navigation__item"><a href="common-areas.html" class="navigation__link">COMMON AREAS</a></li>
+                <li class="navigation__item"><a href="nearby-attractions.html" class="navigation__link">NEARBY ATTRACTIONS</a></li>
+                <li class="navigation__item"><a href="index.html#map" class="navigation__link">&nbsp;&nbsp;&nbsp;MAP&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="navigation__item"><a href="index.html#contact" class="navigation__link" id="menuContact">CONTACT</a></li>
+                </ul>
+        </nav>
+      </div>
+    
         <main>
+            <h1 class="pad-bottom-2 pad-top-4">Breezy Blue's Pictures</h1>
+
             <section id="all-houses-pics">
                 <figure>
-                    <img src="images/bb-living-room.PNG"  alt="Breezy Blue's Living Room" class="fig-all-pics" onclick="window.open('images/bb-living-room.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-living-room.PNG"  alt="Breezy Blue's Living Room" class="fig-all-pics" onclick="window.open('images/bb-living-room.PNG')">
                 </figure>
 
                 <figure>
-                    <img src="images/bb-living-room-2.PNG"  alt="Breezy Blue's Living Room" class="fig-all-pics" onclick="window.open('images/bb-living-room-2.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-living-room-2.PNG"  alt="Breezy Blue's Living Room" class="fig-all-pics" onclick="window.open('images/bb-living-room-2.PNG')">
                 </figure>
 
                 <figure >
-                    <img src="images/bb-living-room-3.PNG"  alt="Breezy Blue's Living Room" class="fig-all-pics" onclick="window.open('images/bb-living-room-3.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-living-room-3.PNG"  alt="Breezy Blue's Living Room" class="fig-all-pics" onclick="window.open('images/bb-living-room-3.PNG')">
                 </figure>
 
                 <figure >
-                    <img src="images/bb-couch.PNG"  alt="Breezy Blue's Comfy Couch" class="fig-all-pics" onclick="window.open('images/bb-couch.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-couch.PNG"  alt="Breezy Blue's Comfy Couch" class="fig-all-pics" onclick="window.open('images/bb-couch.PNG')">
                 </figure>
 
                 <figure >
-                    <img src="images/bb-bedroom.PNG"  alt="Breezy Blue's Bedroom" class="fig-all-pics" onclick="window.open('images/bb-bedroom.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-bedroom.PNG"  alt="Breezy Blue's Bedroom" class="fig-all-pics" onclick="window.open('images/bb-bedroom.PNG')">
                 </figure>
 
                 <figure >
-                    <img src="images/bb-bedroom-2.PNG"  alt="Breezy Blue's Bedroom" class="fig-all-pics" onclick="window.open('images/bb-bedroom-2.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-bedroom-2.PNG"  alt="Breezy Blue's Bedroom" class="fig-all-pics" onclick="window.open('images/bb-bedroom-2.PNG')">
                 </figure>
 
                 <figure >
-                    <img src="images/bb-closet.PNG"  alt="Breezy Blue's Closet" class="fig-all-pics" onclick="window.open('images/bb-closet.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-closet.PNG"  alt="Breezy Blue's Closet" class="fig-all-pics" onclick="window.open('images/bb-closet.PNG')">
                 </figure>
 
                 <figure >
-                    <img src="images/bb-kitchen.PNG"  alt="Breezy Blue's Kitchen" class="fig-all-pics" onclick="window.open('images/bb-kitchen.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-kitchen.PNG"  alt="Breezy Blue's Kitchen" class="fig-all-pics" onclick="window.open('images/bb-kitchen.PNG')">
                 </figure>
                 
                 <figure >
-                    <img src="images/bb-electric-oven.png"  alt="Breezy Blue's Kitchen" class="fig-all-pics" onclick="window.open('images/bb-electric-oven.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-electric-oven.png"  alt="Breezy Blue's Kitchen" class="fig-all-pics" onclick="window.open('images/bb-electric-oven.PNG')">
                 </figure>
                 
                 <figure >
-                    <img src="images/bb-coffee.png"  alt="Coffee" class="fig-all-pics" onclick="window.open('images/bb-coffee.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-coffee.png"  alt="Coffee" class="fig-all-pics" onclick="window.open('images/bb-coffee.PNG')">
                 </figure>
                 
                 <figure >
-                    <img src="images/bb-stove.PNG"  alt="Breezy Blue's Stove" class="fig-all-pics" onclick="window.open('images/bb-stove.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-stove.PNG"  alt="Breezy Blue's Stove" class="fig-all-pics" onclick="window.open('images/bb-stove.PNG')">
                 </figure>
                 
                 <figure >
-                    <img src="images/bb-bathroom.PNG"  alt="Breezy Blue's Stove" class="fig-all-pics" onclick="window.open('images/bb-bathroom.PNG')">
+                    <img class="standard-picture img-scale-1" src="images/bb-bathroom.PNG"  alt="Breezy Blue's Stove" class="fig-all-pics" onclick="window.open('images/bb-bathroom.PNG')">
                 </figure>
             </section>
         </main>
 
-        <br><br><br>
-    
-        <footer>
-            <div id="contact">
-              <p id="contact-header">Contact & Location</p><br>
-              <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 1615 28th Ave N-St. Petersburg, FL</p>
-              <a id="tel" href="tel:7272121301"><br><i class="fa-solid fa-phone" style="color: #ffffff;"></i> +1 727-212-1301</a>
-              <div id="contact-us"><p><br><i class="fa-solid fa-envelope" style="color: #ffffff;"></i><a href="mailto:laura@addventuresproperties.com?Subject=Request Info on Addventures Properties" target="_blank" rel="noopener noreferrer"> Contact Us</p></a></div>
+        <footer class="footer">
+            <div id="contact" class="contact">
+              <p id="contact-header"  class="font-white">Location & Contact</p><br>
+              <p class="font-white"><i class="fa-solid fa-location-dot font-white"></i>&nbsp;1615 28th Ave N - St. Petersburg, FL</p>
+              <a id="tel" href="tel:7272121301" class="font-white"><br><i class="fa-solid fa-phone font-white"></i>&nbsp;+1 727-212-1301</a>
+              <div id="email-us" class="font-white"><p><br><i class="fa-solid fa-envelope font-white"></i><a href="mailto:laura@addventuresproperties.com?Subject=Request Info on St. Pete and Chill" target="_blank" rel="noopener noreferrer">&nbsp;Email Us</p></a></div>
             </div>
-            <div id="created-by"><p>Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
+            <div id="created-by"><p class="font-white">Website Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
         </footer>
 
 </body>
+
+<script src="scripts/contact-modal.js"></script>
+
+      
 </html>

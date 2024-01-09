@@ -5,91 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>St. Pete & Chill | Nearby Attractions</title>
     <link href="https://fonts.googleapis.com/css?family=Lilita One:300,400,600,700" rel="stylesheet">
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
     <link rel="stylesheet" href="css/nearby-attractions.css">
-    <link rel="stylesheet" href="/css/mobile-menu.css" class="css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-
-    <!-- LOAD THE LATEST VERSION OF JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- *************** SCRIPT TO MAKE THE MOBILE NAV EXPAND DOWN ****************** -->
-    <script>
-      $(document).ready(function(){
-        $(".nav-button").click(function () {
-        $(".nav-button,.primary-nav").toggleClass("open");
-        });    
-      });
-    </script>
-    
+    <link rel="stylesheet" href="css/menu.css" class="css">
   </head>
 
   <body>
 
     
     <!-- HEADER -->
-    <header >
-        <h1>St. Pete & Chill</h1>
-        <h4>Short & Long Term Stays</h4>
+    <header class="header">
+      <div class="header__logo">
+        <img src="images/logo-st-pete-chill-white.png" alt="" onclick="location.href='index.html'" class="logo cursor-pointer z-index-2">
+      </div>
 
-        <nav>
-          <ul class="primary-nav">
-            <li><a href="check-houses.html">HOUSES</a></li>
-            <li><a href="common-areas.html">COMMON AREAS</a></li>
-            <li><a style="padding: 7px;" href="nearby-attractions.html">NEARBY ATTRACTIONS</a></li>
-            <li><a href="index.html#map">MAP</a></li>
-          </ul>
-      
-          <button class="nav-button">Toggle Navigation</button>
-      
-        </nav>
-
+      <div class="header__text">
+        <h1 class="heading-primary">
+        <span class="heading-primary__main">Cozy Houses</span>
+        <span class="heading-primary__sub">in St Petersburg, FL</span>
+      </h1>
+      </div>
     </header>
 
+
+  <!-- MENU -->
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+    <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+    </label>
+
+    <div class="navigation__background">&nbsp;</div>
+
+    <nav class="navigation__nav">
+        <ul class="navigation__list">
+            <li class="navigation__item"><a href="cozy-houses.html" class="navigation__link">COZY HOUSES</a></li>
+            <li class="navigation__item"><a href="common-areas.html" class="navigation__link">COMMON AREAS</a></li>
+            <li class="navigation__item"><a href="nearby-attractions.html" class="navigation__link">NEARBY ATTRACTIONS</a></li>
+            <li class="navigation__item"><a href="index.html#map" class="navigation__link">&nbsp;&nbsp;&nbsp;MAP&nbsp;&nbsp;&nbsp;</a></li>
+            <li class="navigation__item"><a href="index.html#contact" class="navigation__link" id="menuContact">CONTACT</a></li>
+            </ul>
+    </nav>
+  </div>
+
     <main>
-
-      <h1 id="nearby-container-header">Nearby Attractions</h1>
-
+      <h2 class="pad-bottom-2 heading-secondary">Nearby Attractions</h2>
       <section id="nearby-attractions-container">
 
         <figure id="madeira" class="nearby-figure">
-          <img class="figure-madeira" src="images/attraction-madeira-beach.png" alt="Madeira Beach" onclick="(window.open('https://www.google.com/search?q=madeira+beach+florida&sca_esv=556426742&source=hp&ei=RUnYZIC8OZKo1QG4uYXwCQ&iflsig=AD69kcEAAAAAZNhXVZGmKMUurfQyLCK9cZl8BnpOZMAS&ved=0ahUKEwjA8r2g1NiAAxUSVDUKHbhcAZ4Q4dUDCAs&uact=5&oq=madeira+beach+florida&gs_lp=Egdnd3Mtd2l6IhVtYWRlaXJhIGJlYWNoIGZsb3JpZGEyCBAuGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESN4gUABYzR5wAHgAkAEEmAH2BKAB1TuqAQswLjMuNS40LjYuM7gBA8gBAPgBAcICCxAAGIoFGLEDGIMBwgILEC4YgAQYsQMYgwHCAgsQABiABBixAxiDAcICCxAuGIoFGLEDGIMBwgIIEAAYgAQYsQPCAhEQLhiABBixAxiDARjHARjRA8ICBRAuGIAEwgIOEC4YgAQYsQMYxwEYrwHCAgsQLhiDARixAxiABMICCxAuGIAEGMcBGK8BwgIREC4YgAQYsQMYgwEYxwEYrwHCAggQLhixAxiABMICERAuGIAEGMcBGK8BGJgFGJkF&sclient=gws-wiz'))">
-          <figcaption><h3>Madeira Beach</h3></figcaption>
+          <img id="figure-madeira" class="standard-picture img-scale-1" src="images/attraction-madeira-beach.png" alt="Madeira Beach" onclick="(window.open('https://www.google.com/search?q=madeira+beach+florida&sca_esv=556426742&source=hp&ei=RUnYZIC8OZKo1QG4uYXwCQ&iflsig=AD69kcEAAAAAZNhXVZGmKMUurfQyLCK9cZl8BnpOZMAS&ved=0ahUKEwjA8r2g1NiAAxUSVDUKHbhcAZ4Q4dUDCAs&uact=5&oq=madeira+beach+florida&gs_lp=Egdnd3Mtd2l6IhVtYWRlaXJhIGJlYWNoIGZsb3JpZGEyCBAuGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESN4gUABYzR5wAHgAkAEEmAH2BKAB1TuqAQswLjMuNS40LjYuM7gBA8gBAPgBAcICCxAAGIoFGLEDGIMBwgILEC4YgAQYsQMYgwHCAgsQABiABBixAxiDAcICCxAuGIoFGLEDGIMBwgIIEAAYgAQYsQPCAhEQLhiABBixAxiDARjHARjRA8ICBRAuGIAEwgIOEC4YgAQYsQMYxwEYrwHCAgsQLhiDARixAxiABMICCxAuGIAEGMcBGK8BwgIREC4YgAQYsQMYgwEYxwEYrwHCAggQLhixAxiABMICERAuGIAEGMcBGK8BGJgFGJkF&sclient=gws-wiz'))">
+          <figcaption id="caption-madeira" class="fig-caption"><h3>Madeira Beach</h3></figcaption>
         </figure>
 
         <figure id="john-pass"  class="nearby-figure">
-          <img src="images/attraction-johns-pass.png" alt="John's Pass" onclick="(window.open('https://www.visitstpeteclearwater.com/profile/johns-pass-village-boardwalk/138598'))">
-          <figcaption><h3>John's Pass</h3></figcaption>
+          <img id="figure-john-pass" class="standard-picture img-scale-1" src="images/attraction-johns-pass.png" alt="John's Pass" onclick="(window.open('https://www.visitstpeteclearwater.com/profile/johns-pass-village-boardwalk/138598'))">
+          <figcaption id="caption-john-pass" class="fig-caption"><h3>John's Pass</h3></figcaption>
         </figure>
 
         <figure id="downtown" class="nearby-figure">
-          <img src="images/attraction-st-pete-downtown.png" alt="St. Pete Downtown" onclick="(window.open('https://www.tripadvisor.com/Attraction_Review-g34607-d9731841-Reviews-Downtown_St_Petersburg-St_Petersburg_Florida.html'))">
-          <figcaption><h3>St. Pete Downtown</h3></figcaption>
+          <img id="figure-downtown" class="standard-picture  img-scale-1" src="images/attraction-st-pete-downtown.png" alt="St. Pete Downtown" onclick="(window.open('https://www.tripadvisor.com/Attraction_Review-g34607-d9731841-Reviews-Downtown_St_Petersburg-St_Petersburg_Florida.html'))">
+          <figcaption id="caption-downtown" class="fig-caption"><h3>St. Pete Downtown</h3></figcaption>
         </figure>
 
           <figure id="weedon" class="nearby-figure">
-          <img src="images/attraction-weedon-island-preserve.png" alt="Weedon Island Preserve" onclick="(window.open('https://www.weedonislandpreserve.org/'))">
-          <figcaption><h3>Weedon Island Preserve</h3></figcaption>
+          <img id="figure-weedon" class="standard-picture  img-scale-1" src="images/attraction-weedon-island-preserve.png" alt="Weedon Island Preserve" onclick="(window.open('https://www.weedonislandpreserve.org/'))">
+          <figcaption id="caption-weedon" class="fig-caption"><h3>Weedon Island Preserve</h3></figcaption>
         </figure>
 
         <figure id="tropicana" class="nearby-figure">
-          <img src="images/attraction-tropicana-field.png" alt="Tropicana Field" onclick="(window.open('https://www.mlb.com/rays/ballpark'))">
-          <figcaption><h3>Tropicana Field</h3></figcaption>
+          <img id="figure-tropicana" class="standard-picture  img-scale-1" src="images/attraction-tropicana-field.png" alt="Tropicana Field" onclick="(window.open('https://www.mlb.com/rays/ballpark'))">
+          <figcaption id="caption-tropicana" class="fig-caption"><h3>Tropicana Field</h3></figcaption>
         </figure>
 
       </section>
 
     </main>
-  
-    <footer>
-      <div id="contact">
-        <p id="contact-header">Contact & Location</p><br>
-        <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 1615 28th Ave N-St. Petersburg, FL</p>
-        <a id="tel" href="tel:7272121301"><br><i class="fa-solid fa-phone" style="color: #ffffff;"></i> +1 727-212-1301</a>
-        <div id="contact-us"><p><br><i class="fa-solid fa-envelope" style="color: #ffffff;"></i><a href="mailto:laura@addventuresproperties.com?Subject=Request Info on Addventures Properties" target="_blank" rel="noopener noreferrer"> Contact Us</p></a></div>
+
+    <footer class="footer">
+      <div id="contact" class="contact">
+        <p id="contact-header"  class="font-white">Location & Contact</p><br>
+        <p class="font-white"><i class="fa-solid fa-location-dot font-white"></i>&nbsp;1615 28th Ave N - St. Petersburg, FL</p>
+        <a id="tel" href="tel:7272121301" class="font-white"><br><i class="fa-solid fa-phone font-white"></i>&nbsp;+1 727-212-1301</a>
+        <div id="email-us" class="font-white"><p><br><i class="fa-solid fa-envelope font-white"></i><a href="mailto:laura@addventuresproperties.com?Subject=Request Info on St. Pete and Chill" target="_blank" rel="noopener noreferrer">&nbsp;Email Us</p></a></div>
       </div>
-      <div id="created-by"><p>Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
+      <div id="created-by"><p class="font-white">Website Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
     </footer>
 
   </body>
 
+  <script src="scripts/contact-modal.js"></script>
+  
 </html>
