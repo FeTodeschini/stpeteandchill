@@ -22,4 +22,8 @@ function checkAvailability(house){
 
 }
 
+function collapseMenu(){
+  document.getElementById('navi-toggle').checked = false;
+}
+
 

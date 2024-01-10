@@ -8,13 +8,13 @@
 .section-about-description{
     padding: 0 2rem 4rem 2rem;
     line-height: 2rem;
+ }
+
+ .about-title{
     text-align: center;
  }
 
-.subject-description{
-    font-size: 2.5rem;
-    color: #777;
-}
+ .about-text{text-align: justify;}
 
 /* ---------- OWNER'S PAGE ---------- */
 #laura-large{
@@ -44,13 +44,14 @@
     text-align: center;
 }
 
-#btn-owner-close{
-    margin-top: 20px;
-}
-
 .section-options-figure{
     width: 7rem;
     margin-bottom: 2rem;
+}
+
+.section-options-description{
+    line-height: 1.7rem;
+    text-align: justify;
 }
 
 /* ---------- MAP ---------- */
@@ -71,7 +72,7 @@
 
 /* ---------- OPTIONS ----------  */
 .section-options{
-    padding: 15rem 0;
+    padding: 17rem 0;
     background-image: linear-gradient(
         to right bottom,
         rgba(195, 231, 248, 0.8),
@@ -79,7 +80,7 @@
         url(../images/attraction-weedon-island-preserve.png);
     background-size: cover;
     transform: skewY(-7deg);
-    height: 150vh;
+    height: 156vh;
     margin: 4rem 0;
 }
 
@@ -105,65 +106,64 @@
     cursor: pointer;
 }
 
-    /* ADDITIONAL INFO */
+/* ADDITIONAL INFO */
 
-    .additional-info__container{
-        padding: 0;
-        justify-content: space-around;
-        width: 70%;
-        margin: 0 auto;
-    }
+.additional-info__container{
+    padding: 0;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+}
 
-    .additional-info__card {
-        box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
-        border-radius: 5px;
-        transition: transform .3s;
-        height: 18rem;
-        position: relative;
-        padding: 1rem;
-        cursor: pointer;
-        margin-bottom: 4rem;
-    }
-    
-    .additional-info__card:hover {transform: translateY(-1.5rem) scale(1.03);}    
-    
-    .additional-info-card__picture {
-        background-size: contain;
-        background-blend-mode: screen;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        height: 17rem;
-    }
+.additional-info__card {
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
+    border-radius: 5px;
+    transition: transform .3s;
+    height: 18rem;
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
 
-    .additional-info-card__picture-owner{
-        background-image: url(../images/laura.PNG);
-    }
+.additional-info__card:hover {transform: translateY(-1.5rem) scale(1.03);}    
 
-    .additional-info-card__picture-airbnb{
-        background-image: url(../images/logo-airbnb.png);
-    }
+.additional-info-card__picture {
+    background-size: contain;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    height: 17rem;
+}
 
-    .additional-info-card__picture-owner, .additional-info-card__picture-airbnb{
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
-        opacity: .5;
-    }
+.additional-info-card__picture-owner{
+    background-image: url(../images/laura.PNG);
+}
 
-    .additional-info-card__title {
-        font-size: 2rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-align: right;
-        position: absolute;
-        top: 15rem;
-        right: 1.5rem;
-        width: 75%;
-    }
+.additional-info-card__picture-airbnb{
+    background-image: url(../images/logo-airbnb.png);
+}
 
-    .additional-info-card__title-span{
-        background-image: linear-gradient(to right bottom, rgba(195, 231, 248, 0.8), rgba(28, 84, 158, 0.8));
-        color: #fff;
-    }
+.additional-info-card__picture-owner, .additional-info-card__picture-airbnb{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.additional-info-card__title {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 15rem;
+    right: 1.5rem;
+    width: 75%;
+}
+
+.additional-info-card__title-span{
+    background-image: linear-gradient(to right bottom, rgba(195, 231, 248, 0.8), rgba(28, 84, 158, 0.8));
+    color: #fff;
+}
 
 @media screen and (min-width: 780px){
 
@@ -204,10 +204,6 @@
         padding: 0 1rem;
      }
 
-     .section-options-description{
-        line-height: 1.7rem;;
-    }
-    
     .options-card {
         padding: 2rem 3rem 22rem 3rem;
         width: 20%;
@@ -217,10 +213,6 @@
     }
 
     .options-card:hover {transform: translateY(-1.5rem) scale(1.03);}
-
-    .additional-info{
-        padding-top: 10rem;
-    }
 
     .additional-info__container{
         padding: 5rem 0;

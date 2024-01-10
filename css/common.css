@@ -120,6 +120,10 @@ input[type=date] {
 
 .font-dark-grey {color: #777;}
 
+.text-justify{text-align: justify;}
+
+.text-center{text-align: center;}
+
 /* ---------- FIGURE CAPTION INSIDE THE FIGURE ---------- */
 figure{position: relative;}
 
@@ -255,8 +259,8 @@ figcaption > h3{
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
@@ -266,7 +270,7 @@ figcaption > h3{
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        background-color: rgba(#000000000, .3);
+        background-color: rgba(#000, .3);
     }
   }
   
@@ -282,7 +286,7 @@ figcaption > h3{
   
   /* The Close Button */
   .close {
-    color: black;
+    color: #1C549E;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -291,7 +295,7 @@ figcaption > h3{
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: #1C549E;
     text-decoration: none;
     cursor: pointer;
   }

@@ -8,6 +8,7 @@
     <link href="css/header.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="css/menu.css" class="css">
+    <link rel="stylesheet" href="css/popup.css" class="css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   </head>
 
@@ -28,8 +29,8 @@
             <li class="navigation__item"><a href="cozy-houses.html" class="navigation__link">COZY HOUSES</a></li>
             <li class="navigation__item"><a href="common-areas.html" class="navigation__link">COMMON AREAS</a></li>
             <li class="navigation__item"><a href="nearby-attractions.html" class="navigation__link">NEARBY ATTRACTIONS</a></li>
-            <li class="navigation__item"><a href="index.html#map" class="navigation__link">&nbsp;&nbsp;&nbsp;MAP&nbsp;&nbsp;&nbsp;</a></li>
-            <li class="navigation__item"><a href="index.html#contact" class="navigation__link" id="menuContact">CONTACT</a></li>
+            <li class="navigation__item"><a href="index.html#section-about-map" class="navigation__link" onclick="collapseMenu();">&nbsp;&nbsp;&nbsp;MAP&nbsp;&nbsp;&nbsp;</a></li>
+            <li class="navigation__item"><a href="index.html#contact" class="navigation__link" id="menuContact" onclick="collapseMenu();">CONTACT</a></li>
             </ul>
     </nav>
   </div>
@@ -58,9 +59,9 @@
 
         <div class="section-about-container">
           <div class="section-about-description font-dark-grey">
-            <h2 class="heading-quarternary pad-bottom-1">About the Property</h2>
-            Perfectly located in between the beautiful beaches of St. Pete with pristine waters and the best restaurants and nighlife of the city, St. Pete & Chill is also a short drive to Clearwater and just across the bridge from Tampa.
-            Its cozy houses are fully equiped for you to enjoy your time in St. Pete, and the common area provides a pleasant vacation-like vibe, with an outdoor chilling and dining space.
+            <h2 class="about-title heading-quarternary pad-bottom-1">About the Property</h2>
+            <div class="about-text">Perfectly located in between the beautiful beaches of St. Pete with pristine waters and the best restaurants and nighlife of the city, St. Pete & Chill is also a short drive to Clearwater and just across the bridge from Tampa.
+            Its cozy houses are fully equiped for you to enjoy your time in St. Pete, and the common area provides a pleasant vacation-like vibe, with an outdoor chilling and dining space.</div>
           </div>
 
           <div id="section-about-map" class="section-about-map">
@@ -100,8 +101,8 @@
         <h2 class="pad-top-2 pad-bottom-2 heading-secondary">Additional Info</h2>
 
         <div class="additional-info__container">
-          <div id="owner-container" class="additional-info__card">
-            <div id="laura" class="additional-info-card__picture additional-info-card__picture-owner" alt="Owner"></div>
+          <div id="owner-container" class="additional-info__card" onclick="location.href='#popup'">
+            <div id="laur" class="additional-info-card__picture additional-info-card__picture-owner" alt="Owner"></div>
             <div class="additional-info-card__title">
               <p class="additional-info-card__title-span">Meet the Owner</p>
             </div>
@@ -125,31 +126,30 @@
         <a id="tel" href="tel:7272121301" class="font-white"><br><i class="fa-solid fa-phone font-white"></i>&nbsp;+1 727-212-1301</a>
         <div id="email-us" class="font-white"><p><br><i class="fa-solid fa-envelope font-white"></i><a href="mailto:laura@addventuresproperties.com?Subject=Request Info on St. Pete and Chill" target="_blank" rel="noopener noreferrer">&nbsp;Email Us</p></a></div>
       </div>
-      <div id="created-by"><p class="font-white">Website Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
+      <div id="created-by"><p class="font-white text-center">Website Created By <a class="underline" href="mailto:todeschini@hotmail.com?Subject=Website Development&Body=I liked St. Pete and Chill website and I am interested on building my own site.">Felipe Todeschini</a></p></div>      
     </footer>
-
-    <!-- OWNER MODAL -->
-    <div id="ownerModal" class="modal">
-      <section id="modal-container" class="modal-content">
-        <span class="close">&times;</span>
-        <figure id="owner-info-pic">
-            <img id="laura-large" src="images/laura-large.png" alt="Owner">
-        </figure>
-        <div id="owner-description">
-            <br><br>
-            <h1>About Laura</h1>
-            <br><br>
-            <p>Laura has been gladly hosting for 7 years, being a super host on AirBnB.</p><br>
-            <p>Besides being a painter who paints murals in Tampa Bay Area, she is also a spinning and yoga instructor who loves the outdoors. Ask her about kayaking near her property!</p>
-            <br><br>
-        </div>
-      </section>
-    </div>
 
   </body>
 
+  <!-- POPUP -->
+  <div class="popup" id="popup" onclick="location.href='#owner-container'">
+    <div class="popup__content">
+      <a href="#owner-container" class="popup__close">&times;</a>
+      <figure id="owner-info-pic">
+        <img id="laura-large" src="images/laura-large.png" alt="Owner">
+      </figure>
+      <div id="owner-description">
+        <br><br>
+        <h1>About Laura</h1>
+        <br><br>
+        <p class="text-justify">Laura has been gladly hosting since 2016, being a super host on AirBnB.</p><br>
+        <p class="text-justify">Besides being a painter who paints murals in Tampa Bay Area, she is also a spinning and yoga instructor who loves the outdoors - and also beautiful murals in her houses. Ask her about kayaking near her property!</p>
+        <br><br>
+      </div>
+    </div>
+  </div>
+
   <script src="scripts/scripts.js"></script>
   <script src="scripts/owner-modal.js"></script>
-  <script src="scripts/contact-modal.js"></script>
   
 </html>

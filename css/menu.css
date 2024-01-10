@@ -84,6 +84,11 @@
         transform: scale(80);
     }
 
+    /* Trick for hidding the menu once Map or Contact is clicked */
+    .navigation__checkbox:not(:checked) ~ .navigation__background {
+        transform: scale(1);
+    }
+
     .navigation__checkbox:checked ~ .navigation__nav {
         opacity: 1;
         width: 100%;
